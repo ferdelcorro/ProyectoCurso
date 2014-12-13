@@ -1,0 +1,12 @@
+<form method='post' action='/signup/'>
+    {% csrf_token %}
+    <br><br><br>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+            {{ form_vet.as_p }}
+            <hr>
+            {{ form_user.as_p }}
+            <button type="submit" class="btn btn-primary pull-right">aceptar</button>
+        </div>
+    </div>
+</form>

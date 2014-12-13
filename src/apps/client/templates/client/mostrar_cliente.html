@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<h1 align=center> Datos del cliente </h1>
+
+    <h3>Datos Cliente</h3>
+        <p>Nombre: {{ cliente.name }}</p>
+        <p>Teléfono: {{ cliente.telephone}}</p>
+    <hr>
+    <h3>Mascotas del Cliente</h3>
+        {% if mascotas %}
+            {% for m in mascotas %}
+                <p><a href="{% url 'mostrar_mascota' m.id %}">{{m.name}}</a></p>
+            {% endfor %}
+        {% else %}
+            <p>No posee mascotas.</p>
+        {% endif %}
+        <p><a href="{% url 'cargar_mascota' cliente.id %}" > Cargar nueva mascota </a></p>
+    <br>
+    <a href="/" > VOLVER AL INICIO </a>
+
+</body>
+</html>

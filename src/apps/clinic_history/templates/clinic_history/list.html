@@ -1,0 +1,32 @@
+<div id="content-outer">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                {% if historiales %}
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Fecha</td>
+                                <td>Notas</td>
+                            </tr>
+                         </thead>
+                        <tbody>
+                            {% for x in historiales %}
+                                <tr>
+                                    <td><p>{{x.date_analysis}}</a></p></td>
+                                    <td><p>{{x.notas}}</a></p></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No posee historiales.
+                {% endif %}
+                <p><a href="{% url 'cargar_historial' mascota %}">Cargar historial</a></p>
+                <p><a href="{% url 'mostrar_mascota' mascota %}">Volver a la mascota</a></p>
+                <p><a href="{% url 'mostrar_cliente' cliente %}">Volver al cliente</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="/" > VOLVER AL INICIO </a>

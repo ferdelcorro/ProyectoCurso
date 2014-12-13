@@ -1,0 +1,18 @@
+<html>
+<body>
+<h1 align=center> Datos de la mascota </h1>
+    <p>Nombre: {{ mascota.name }}
+    <p>Raza: {{ mascota.race }}
+    <p>Sexo:    {% if mascota.sex == 1 %}
+                    Macho
+                {% else %}
+                    Hembra
+                {% endif %}
+    <br>
+    <p><a href="{% url 'historial' mascota.id %}" > Historial clínico </a></p>
+    <p><a href="{% url 'mostrar_cliente' mascota.owner.id %}" > Volver al cliente </a></p>
+    <br>
+    <a href="/" > VOLVER AL INICIO </a>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="row">
+        <div class="col-md-12">
+            <table class="table" border="1">
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Teléfono</td>
+                    </tr>
+                 </thead>
+                <tbody>
+                    {% for x in clientes %}
+                        <tr>
+                            <td><p><a href="/mostrar_cliente/{{x.id}}/">{{x.name}}</a></p></td>
+                            <td>{{ x.telephone }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</div>
+<br>
+<a href="/" > VOLVER AL INICIO </a>
